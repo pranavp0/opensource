@@ -1,0 +1,45 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+<fieldset>
+    <legend><h1>Calculator:</h1></legend>
+    <h1>Addition</h1>
+    <form action="add" method="POST">
+        {% csrf_token %}
+
+        <strong>Enter first number:</strong>  <input type="text" name="num1"><br>
+        <strong>Enter second number:</strong> <input type="text" name="num2"><br><br>
+        <input type="submit">
+    </form>
+
+    <h1>Subtraction</h1>
+    <form action="sub" method="POST">
+        {% csrf_token %}
+
+        <strong>Enter first number:</strong> <input type="text" name="num1"><br>
+        <strong>Enter second number:</strong> <input type="text" name="num2"><br><br>
+        <input type="submit">
+    </form>
+
+    <h1>Multiplication</h1>
+    <form action="multi" method="POST">
+        {% csrf_token %}
+
+        <strong>Enter first number:</strong> <input type="text" name="num1"><br>
+        <strong>Enter second number:</strong> <input type="text" name="num2"><br><br>
+        <input type="submit">
+    </form>
+
+    <h1>Division</h1>
+    <form action="div" method="POST">
+        {% csrf_token %}
+
+        <strong>Enter first number:</strong> <input type="text" name="num1"><br>
+        <strong>Enter second number:</strong> <input type="text" name="num2"><br><br>
+        <input type="submit">
+    </form>
+
+
+</fieldset>
+
+{% endblock %}
